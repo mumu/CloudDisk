@@ -35,7 +35,7 @@
 				<li class='mdui-list-item mdui-ripple' onclick="location.href='./<?php echo basename(__FILE__); ?>?dir=<?php echo empty($_REQUEST["dir"]) ? ".." : (empty(dirname($_REQUEST["dir"], 1))?".":dirname($_REQUEST["dir"], 1)); ?>'"><i class='mdui-list-item-avatar mdui-icon material-icons mdui-color-blue mdui-text-color-white'>arrow_upward</i><div class='mdui-list-item-content'><a>..</a></li>
 <?php
 error_reporting(0);
-$base = '/home/vol1_2/hstn.me/mseet_34006442/htdocs/';
+$base = dirname(realpath(__FILE__)).'/';
 $dir = empty($_REQUEST["dir"]) ? __DIR__ : $_REQUEST["dir"];
 function humanizeFileSize($path){
 	$a=$path;//filesize("$path");
